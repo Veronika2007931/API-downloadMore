@@ -13,8 +13,8 @@ export class NewsApi {
        this.page = 1
     }
     
-    getArticles(searchQuery){
-   return fetch(`${BASE_URL}everything?q=${this.searchQuery}&pageSize=10&page=${this.page}`, options)
+    getArticles(){
+   return fetch(`${BASE_URL}everything?q=${this.searchQuery}&pageSize=5&page=${this.page}`, options)
     .then(response => response.json())
     .then(articles=>{
           this.increasePage
